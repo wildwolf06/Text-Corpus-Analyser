@@ -15,6 +15,10 @@ def build_parser():
         p.add_argument("--starts-with", help="Keep only words that start with this letter")
         p.add_argument("--config", default="config.ini", help="Path to config file for stopwords")
     
+    p1 = sub.add_parser("palindrome")
+    add_input_options(p1)
+    p1.add_argument("output")
+    add_word_filters(p1)
 
     
 
